@@ -1,3 +1,10 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Labs20211-Gr05</string>
+    <string name="Button">Siguiente</string>
+    <string name="textview">Información de contacto</string>
+    <string name="textPhone" tools:ignore="MissingTranslation">Teléfono</string>
+    <string name="textEmail" tools:ignore="MissingTranslation">E-mail</string>
+    <string name="textPais" tools:ignore="MissingTranslation">País</string>
+    <string name="textCiudad" tools:ignore="MissingTranslation">Ciudad</string>
+    <string name="textDirec" tools:ignore="MissingTranslation">Dirección</string>
 </resources>
