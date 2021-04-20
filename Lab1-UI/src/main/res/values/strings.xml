@@ -7,4 +7,5 @@
     <string name="textPais" tools:ignore="MissingTranslation">País</string>
     <string name="textCiudad" tools:ignore="MissingTranslation">Ciudad</string>
     <string name="textDirec" tools:ignore="MissingTranslation">Dirección</string>
+    <string name="textErrorEmmail" tools:ignore="MissingTranslation">Porfavor ingresar un correo valido</string>
 </resources>
