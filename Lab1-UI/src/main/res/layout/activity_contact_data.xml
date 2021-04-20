@@ -145,4 +145,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/botonAtras"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Button2"
+        app:backgroundTint="@color/black"
+        app:layout_constraintEnd_toStartOf="@+id/botonSiguiente"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="582dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
