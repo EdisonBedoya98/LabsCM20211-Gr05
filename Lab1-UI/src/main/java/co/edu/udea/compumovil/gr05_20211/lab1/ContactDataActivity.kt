@@ -7,19 +7,20 @@ import android.widget.AutoCompleteTextView
 import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
+import kotlinx.android.synthetic.main.activity_contact_data.*
 import java.util.regex.Matcher
 import java.util.regex.Pattern
 
 
-class ContactDataActivity(correo: String) : AppCompatActivity() {
 
-    var acPais: AutoCompleteTextView? = null
-    var acCiudad:AutoCompleteTextView? = null
-    var txtTelefono: EditText? = null
-    var txtCorreo:EditText? = null
-    var txtDireccion:EditText? = null
-    var txtPais:EditText? = null
-    var btnSiguiente: Button? = null
+class ContactDataActivity : AppCompatActivity() {
+
+    private var acPais: AutoCompleteTextView? = null
+    private var acCiudad:AutoCompleteTextView? = null
+    private var txtTelefono: EditText? = null
+    private var txtCorreo:EditText? = null
+    private var txtDireccion:EditText? = null
+    private var txtPais:EditText? = null
     var btnAtras:Button? = null
     var pais: String? = null
 
@@ -27,34 +28,54 @@ class ContactDataActivity(correo: String) : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_contact_data)
-        txtTelefono = findViewById(R.id.textPhone);
-        txtCorreo = findViewById(R.id.textEmail);
-        txtDireccion = findViewById(R.id.textDireccion);
-        txtPais = findViewById(R.id.textPais);
+        txtTelefono = findViewById(R.id.textPhone)
+        txtCorreo = findViewById(R.id.textEmail)
+        txtDireccion = findViewById(R.id.textDireccion)
+        txtPais = findViewById(R.id.textPais)
 
+        val personalDataBtn: Button = findViewById(R.id.btnNext)
+        personalDataBtn.setOnClickListener {
+            val aux = contactDataActivity()
+            if (aux){
+                val intent = Intent(this, DataActivity::class.java)
+                startActivity(intent)
+            }
+        }
     }
 
-
-
     private val countries = arrayOf(
-            "Colombia", "Ecuador", "Venezuela", "Peru", "Bolivia", "Paraguay", "Brasil", "Chile", "Uruguay", "Argentina"
+        "Colombia",
+        "Ecuador",
+        "Venezuela",
+        "Peru",
+        "Bolivia",
+        "Paraguay",
+        "Brasil",
+        "Chile",
+        "Uruguay",
+        "Argentina"
     )
 
     private val cities = arrayOf(
-            "Medellin", "Bogota", "Cali", "Barranquilla"
+        "Medellin", "Bogota", "Cali", "Barranquilla"
     )
     
     private fun isEmailValid(email: String?): Boolean {
-        val expression = "^[\\w\\.-]+@([\\w\\-]+\\.)+[A-Z]{2,4}$"
-        val pattern: Pattern = Pattern.compile(expression, Pattern.CASE_INSENSITIVE)
-        val matcher: Matcher = pattern.matcher(email)
-        return matcher.matches()
+        val pattern = Pattern.compile(
+            "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$"
+        )
+        val mather: Matcher = pattern.matcher(email)
+        val emailValid : Boolean = mather.find()
+        if (!emailValid){
+            textEmail?.error = getString(R.string.textErrorEmmail)
+        }
+        return emailValid
     }
 
-    fun Vacio(campo: EditText?, message: String): Boolean {
-        val dato = campo.toString().trim { it <= ' ' }
+    private fun fullField(campo: EditText?, message: Int): Boolean {
+        val dato = campo?.text
         return if (TextUtils.isEmpty(dato)) {
-            campo?.error = message
+            campo?.error = getString(message)
             campo?.requestFocus()
             false
         } else {
@@ -62,27 +83,24 @@ class ContactDataActivity(correo: String) : AppCompatActivity() {
         }
     }
 
-    private fun contactDataActivity() {
-        var telefono : String = txtTelefono.toString()
-        var correo : String = txtCorreo.toString()
-        var direccion : String = txtDireccion.toString()
-        var pais : String = acPais.toString()
-        var ciudad : String = acCiudad.toString()
-        var validarEmail : Boolean = isEmailValid(correo)
-        var Vacio = false
+    private fun contactDataActivity(): Boolean {
+        //var telefono : String = txtTelefono?.text.toString()
+        val correo : String = txtCorreo?.text.toString()
+        //var direccion : String = txtDireccion?.text.toString()
+        //var pais : String = acPais.toString()
+        //var ciudad : String = acCiudad.toString()
+        var correctField = false
         //var endActivity : Intent = Intent(ContactDataActivity, endActivity.javaClass)
 
-        if (Vacio(txtCorreo, R.string.textErrorEmmailVal.toString()) and Vacio(txtTelefono, R.string.emptyField.toString()) and Vacio(txtPais, R.string.emptyField.toString())){
-            Vacio = true
+        if (fullField(txtCorreo, R.string.textErrorEmmailVal) and
+            fullField(txtTelefono, R.string.emptyField) and
+            fullField(txtPais, R.string.emptyField) and
+            isEmailValid(correo)
+        )
+        {
+            correctField = true
         }
-
-        if (Vacio){
-
-        }
-    }
-
-    private fun validarCampos() {
-
+        return correctField
     }
 
 
