@@ -10,11 +10,11 @@
         android:id="@+id/imageView"
         android:layout_width="53dp"
         android:layout_height="42dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="128dp"
         app:layout_constraintEnd_toStartOf="@+id/textPhone"
         app:layout_constraintHorizontal_bias="0.458"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInformation"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:drawable/ic_menu_call" />
 
     <ImageView
@@ -32,13 +32,14 @@
         android:id="@+id/botonSiguiente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="24dp"
-        android:onClick="onClick"
         android:text="@string/Button"
         app:backgroundTint="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textDireccion" />
+        app:layout_constraintHorizontal_bias="0.79"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textDireccion"
+        android:onClick="onClick" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -68,7 +69,7 @@
         android:id="@+id/textPhone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="64dp"
         android:ems="10"
         android:hint="@string/textPhone"
         android:inputType="phone"
@@ -148,11 +149,10 @@
         android:id="@+id/botonAtras"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
         android:text="@string/Button2"
         app:backgroundTint="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/botonSiguiente"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textDireccion" />
+        tools:layout_editor_absoluteY="582dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

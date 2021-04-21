@@ -18,7 +18,6 @@ class ContactDataActivity(correo: String) : AppCompatActivity() {
     var txtTelefono: EditText? = null
     var txtCorreo:EditText? = null
     var txtDireccion:EditText? = null
-    var txtPais:EditText? = null
     var btnSiguiente: Button? = null
     var btnAtras:Button? = null
     var pais: String? = null
@@ -30,7 +29,6 @@ class ContactDataActivity(correo: String) : AppCompatActivity() {
         txtTelefono = findViewById(R.id.textPhone);
         txtCorreo = findViewById(R.id.textEmail);
         txtDireccion = findViewById(R.id.textDireccion);
-        txtPais = findViewById(R.id.textPais);
 
     }
 
@@ -51,14 +49,14 @@ class ContactDataActivity(correo: String) : AppCompatActivity() {
         return matcher.matches()
     }
 
-    fun Vacio(campo: EditText?, message: String): Boolean {
-        val dato = campo.toString().trim { it <= ' ' }
+    fun Vacio(campo: EditText): Boolean {
+        val dato = campo.text.toString().trim { it <= ' ' }
         return if (TextUtils.isEmpty(dato)) {
-            campo?.error = message
-            campo?.requestFocus()
-            false
-        } else {
+            campo.error = "Campo Requerido"
+            campo.requestFocus()
             true
+        } else {
+            false
         }
     }
 
@@ -69,19 +67,7 @@ class ContactDataActivity(correo: String) : AppCompatActivity() {
         var pais : String = acPais.toString()
         var ciudad : String = acCiudad.toString()
         var validarEmail : Boolean = isEmailValid(correo)
-        var Vacio = false
-        //var endActivity : Intent = Intent(ContactDataActivity, endActivity.javaClass)
-
-        if (Vacio(txtCorreo, R.string.textErrorEmmailVal.toString()) and Vacio(txtTelefono, R.string.emptyField.toString()) and Vacio(txtPais, R.string.emptyField.toString())){
-            Vacio = true
-        }
-
-        if (Vacio){
-
-        }
-    }
-
-    private fun validarCampos() {
+        var endActivity : Intent = Intent(ContactDataActivity, endActivity.javaClass)
 
     }
 
