@@ -9,4 +9,5 @@
     <string name="textCiudad" tools:ignore="MissingTranslation">City</string>
     <string name="textDirec" tools:ignore="MissingTranslation">Address</string>
     <string name="textPhone" tools:ignore="MissingTranslation">Phone</string>
+    <string name="emptyField" tools:ignore="MissingTranslation">Enter the details pelase</string>
 </resources>

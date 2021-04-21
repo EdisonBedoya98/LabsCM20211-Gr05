@@ -10,4 +10,5 @@
     <string name="textDirec" tools:ignore="MissingTranslation">Dirección</string>
     <string name="textErrorEmmail" tools:ignore="MissingTranslation">Porfavor ingresar un correo valido</string>
     <string name="textErrorEmmailVal" tools:ignore="MissingTranslation">Correo valido</string>
+    <string name="emptyField" tools:ignore="MissingTranslation">Ingrese los datos por favor</string>
 </resources>
