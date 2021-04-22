@@ -1,5 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Labs20211-Gr05</string>
+    <string name="contact_name">Información de contacto</string>
     <string name="Button">Siguiente</string>
     <string name="Button2">Atras</string>
     <string name="textview">Información de contacto</string>
@@ -11,18 +12,7 @@
     <string name="textErrorEmmail" tools:ignore="MissingTranslation">Porfavor ingresar un correo válido</string>
     <string name="textErrorEmmailVal" tools:ignore="MissingTranslation">Correo inválido</string>
     <string name="emptyField" tools:ignore="MissingTranslation">Ingrese los datos por favor</string>
-    <string-array name="pais_array">
-        <item>Colombia</item>
-        <item>Ecuador</item>
-        <item>Venezuela</item>
-        <item>Peru</item>
-        <item>Bolivia</item>
-        <item>Paraguay</item>
-        <item>Brasil</item>
-        <item>Chile</item>
-        <item>Uruguay</item>
-        <item>Argentina</item>
-    </string-array>
+
     <string name="title_activity_data">DataActivity</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>

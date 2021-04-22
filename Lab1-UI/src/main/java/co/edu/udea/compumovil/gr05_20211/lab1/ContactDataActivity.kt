@@ -33,6 +33,8 @@ class ContactDataActivity : AppCompatActivity() {
         txtDireccion = findViewById(R.id.textDireccion)
         acPais = findViewById(R.id.autoCompleteTextViewPaises)
         acCiudad = findViewById(R.id.autoCompleteTextViewCiudades)
+        val actionBar = supportActionBar
+        actionBar!!.title = getString(R.string.contact_name)
 
         var adapterPaises: ArrayAdapter<String> = ArrayAdapter(this,R.layout.support_simple_spinner_dropdown_item,countries)
         with(acPais) {
