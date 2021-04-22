@@ -3,6 +3,7 @@ package co.edu.udea.compumovil.gr05_20211.lab1
 import android.content.Intent
 import android.os.Bundle
 import android.text.TextUtils
+import android.widget.ArrayAdapter
 import android.widget.AutoCompleteTextView
 import android.widget.Button
 import android.widget.EditText
@@ -20,9 +21,8 @@ class ContactDataActivity : AppCompatActivity() {
     private var txtTelefono: EditText? = null
     private var txtCorreo:EditText? = null
     private var txtDireccion:EditText? = null
-    private var txtPais:EditText? = null
     var btnAtras:Button? = null
-    var pais: String? = null
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,7 +31,17 @@ class ContactDataActivity : AppCompatActivity() {
         txtTelefono = findViewById(R.id.textPhone)
         txtCorreo = findViewById(R.id.textEmail)
         txtDireccion = findViewById(R.id.textDireccion)
-        txtPais = findViewById(R.id.textPais)
+        acPais = findViewById(R.id.autoCompleteTextViewPaises)
+        acCiudad = findViewById(R.id.autoCompleteTextViewCiudades)
+
+        var adapterPaises: ArrayAdapter<String> = ArrayAdapter(this,R.layout.support_simple_spinner_dropdown_item,countries)
+        with(acPais) {
+            this?.setAdapter(adapterPaises)
+        }
+        var adapterCiudades: ArrayAdapter<String> = ArrayAdapter(this,R.layout.support_simple_spinner_dropdown_item,cities)
+        with(acCiudad) {
+            this?.setAdapter(adapterCiudades)
+        }
 
         val personalDataBtn: Button = findViewById(R.id.btnNext)
         personalDataBtn.setOnClickListener {
@@ -94,7 +104,7 @@ class ContactDataActivity : AppCompatActivity() {
 
         if (fullField(txtCorreo, R.string.textErrorEmmailVal) and
             fullField(txtTelefono, R.string.emptyField) and
-            fullField(txtPais, R.string.emptyField) and
+            fullField(acPais, R.string.emptyField) and
             isEmailValid(correo)
         )
         {

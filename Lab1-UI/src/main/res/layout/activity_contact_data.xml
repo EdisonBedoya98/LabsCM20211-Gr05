@@ -43,8 +43,7 @@
         android:layout_width="59dp"
         android:layout_height="39dp"
         android:layout_marginTop="44dp"
-        app:layout_constraintEnd_toStartOf="@+id/textPais"
-        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintEnd_toStartOf="@+id/autoCompleteTextViewPaises"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2"
         app:srcCompat="@android:drawable/ic_menu_mapmode" />
@@ -60,18 +59,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInformation" />
-
-    <EditText
-        android:id="@+id/textPais"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:ems="10"
-        android:hint="@string/textPais"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textEmail" />
 
     <EditText
         android:id="@+id/textEmail"
@@ -91,23 +78,10 @@
         android:layout_width="64dp"
         android:layout_height="43dp"
         android:layout_marginTop="32dp"
-        app:layout_constraintEnd_toStartOf="@+id/textCiudad"
-        app:layout_constraintHorizontal_bias="0.351"
+        app:layout_constraintEnd_toStartOf="@+id/autoCompleteTextViewCiudades"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3"
         app:srcCompat="@android:drawable/ic_dialog_map" />
-
-    <EditText
-        android:id="@+id/textCiudad"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:ems="10"
-        android:hint="@string/textCiudad"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textPais" />
 
     <ImageView
         android:id="@+id/imageView5"
@@ -130,7 +104,7 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textCiudad" />
+        app:layout_constraintTop_toBottomOf="@+id/autoCompleteTextViewCiudades" />
 
     <TextView
         android:id="@+id/textInformation"
@@ -152,5 +126,29 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textDireccion" />
+
+    <AutoCompleteTextView
+        android:id="@+id/autoCompleteTextViewPaises"
+        android:layout_width="230dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="32dp"
+        android:hint="Nombre completo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textEmail"
+        tools:ignore="MissingConstraints" />
+
+    <AutoCompleteTextView
+        android:id="@+id/autoCompleteTextViewCiudades"
+        android:layout_width="218dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="32dp"
+        android:hint="Nombre completo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.481"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/autoCompleteTextViewPaises"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
