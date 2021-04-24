@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources  xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Labs20211-Gr05</string>
+    <string name="contact_name">Contact Infomation</string>
+    <string name="Button">Next</string>
+    <string name="Button2">Back</string>
+    <string name="textview">Contact Information</string>
+    <string name="textEmail" tools:ignore="MissingTranslation">E-mail</string>
+    <string name="textPais" tools:ignore="MissingTranslation">Country</string>
+    <string name="textCiudad" tools:ignore="MissingTranslation">City</string>
+    <string name="textDirec" tools:ignore="MissingTranslation">Address</string>
+    <string name="textPhone" tools:ignore="MissingTranslation">Phone</string>
+    <string name="emptyField" tools:ignore="MissingTranslation">Enter the details pelase</string>
+
+
+    <string name="mainTittle" tools:ignore="MissingTranslation">Main Page</string>
+    <string name="PersonalData" tools:ignore="MissingTranslation">Personal Information</string>
+    <string name="names" tools:ignore="MissingTranslation">Names</string>
+    <string name="name" tools:ignore="MissingTranslation">Name</string>
+    <string name="lastName" tools:ignore="MissingTranslation">Last Name</string>
+    <string name="gender" tools:ignore="MissingTranslation">Gender</string>
+    <string name="man" tools:ignore="MissingTranslation">Man</string>
+    <string name="woman" tools:ignore="MissingTranslation">Woman</string>
+    <string name="dateBirth" tools:ignore="MissingTranslation">Data of Birth</string>
+    <string name="change" tools:ignore="MissingTranslation">Change</string>
+    <string name="primary" tools:ignore="MissingTranslation">Primary</string>
+    <string name="highSchool" tools:ignore="MissingTranslation">High School</string>
+    <string name="university" tools:ignore="MissingTranslation">University</string>
+    <string name="other" tools:ignore="MissingTranslation">Other</string>
+
+
+    <string name="allRight" tools:ignore="MissingTranslation">All right</string>
+
+
+    <string name="title_activity_data">DataActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+</resources>
