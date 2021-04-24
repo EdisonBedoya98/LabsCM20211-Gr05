@@ -1,6 +1,7 @@
 package co.edu.udea.compumovil.gr05_20211.lab1
 
 import android.app.DatePickerDialog
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
@@ -107,10 +108,8 @@ class PersonalDataActivity : AppCompatActivity() {
                 Log.i("5","Nació el "+day+"/"+month+"/"+year)
                 Log.i("6",option.selectedItem.toString())
                 Toast.makeText(this, "Todo correctoo", Toast.LENGTH_SHORT).show()
-
-
-
-
+                val intent = Intent(this, ContactDataActivity::class.java)
+                startActivity(intent)
             }
         }
         option = findViewById(R.id.spinner) as Spinner
@@ -118,6 +117,9 @@ class PersonalDataActivity : AppCompatActivity() {
         val options = arrayOf("","Primaria", "Secundaria", "Universitaria", "Otro")
 
         option.adapter = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, options)
+
+
+
 
 
 

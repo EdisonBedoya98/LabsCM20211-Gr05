@@ -24,6 +24,12 @@ class ContactDataActivity : AppCompatActivity() {
     var btnAtras:Button? = null
 
 
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed();
+        return false;
+    }
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,7 +40,13 @@ class ContactDataActivity : AppCompatActivity() {
         acPais = findViewById(R.id.autoCompleteTextViewPaises)
         acCiudad = findViewById(R.id.autoCompleteTextViewCiudades)
         val actionBar = supportActionBar
+
         actionBar!!.title = getString(R.string.contact_name)
+        actionBar.setDisplayHomeAsUpEnabled(true)
+
+
+
+
 
         var adapterPaises: ArrayAdapter<String> = ArrayAdapter(this,R.layout.support_simple_spinner_dropdown_item,countries)
         with(acPais) {
