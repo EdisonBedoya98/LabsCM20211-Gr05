@@ -1,3 +1,25 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Labs20211-Gr05</string>
+    <string name="contact_name">Información de contacto</string>
+    <string name="Button">Siguiente</string>
+    <string name="Button2">Atras</string>
+    <string name="textview">Información de contacto</string>
+    <string name="textPhone" tools:ignore="MissingTranslation">Teléfono</string>
+    <string name="textEmail" tools:ignore="MissingTranslation">E-mail</string>
+    <string name="textPais" tools:ignore="MissingTranslation">País</string>
+    <string name="textCiudad" tools:ignore="MissingTranslation">Ciudad</string>
+    <string name="textDirec" tools:ignore="MissingTranslation">Dirección</string>
+    <string name="textErrorEmmail" tools:ignore="MissingTranslation">Porfavor ingresar un correo válido</string>
+    <string name="textErrorEmmailVal" tools:ignore="MissingTranslation">Correo inválido</string>
+    <string name="emptyField" tools:ignore="MissingTranslation">Ingrese los datos por favor</string>
+
+    <string name="title_activity_data">DataActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 </resources>
