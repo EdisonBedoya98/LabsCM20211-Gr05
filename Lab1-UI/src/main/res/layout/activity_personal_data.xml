@@ -4,16 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".PersonalDataActivity">
+
         <EditText
             android:id="@+id/editTextTextPersonName"
-            android:layout_width="213dp"
-            android:layout_height="45dp"
+            android:layout_width="268dp"
+            android:layout_height="48dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="9dp"
             android:ems="10"
             android:hint="Nombre"
             android:inputType="textPersonName|textCapWords|textNoSuggestions"
@@ -25,44 +27,43 @@
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="258dp"
-            android:layout_marginTop="52dp"
+            android:layout_marginStart="277dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="8dp"
             android:text="Nombres"
+            app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="50dp"
-            android:layout_height="32dp"
-            android:layout_marginStart="23dp"
-            android:layout_marginTop="8dp"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="44dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView2"
             app:srcCompat="@drawable/user_icon" />
 
         <EditText
             android:id="@+id/editTextTextPersonLastName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="92dp"
+            android:layout_width="269dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="37dp"
             android:ems="10"
             android:hint="Apellido"
             android:inputType="textPersonName|textCapWords|textNoSuggestions"
             android:text=""
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.25"
             app:layout_constraintStart_toEndOf="@+id/imageView"
             app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
 
         <ImageView
             android:id="@+id/imageView2"
-            android:layout_width="46dp"
-            android:layout_height="48dp"
-            android:layout_marginStart="23dp"
-            android:layout_marginTop="92dp"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="52dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/user_icon" />
@@ -71,9 +72,10 @@
             android:id="@+id/radioButtonHombre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="28dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
             android:text="Hombre"
+            app:layout_constraintEnd_toStartOf="@+id/radioButtonMujer"
             app:layout_constraintStart_toEndOf="@+id/textView2"
             app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonLastName" />
 
@@ -81,9 +83,12 @@
             android:id="@+id/radioButtonMujer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="8dp"
             android:text="Mujer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.126"
             app:layout_constraintStart_toEndOf="@+id/radioButtonHombre"
             app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonLastName" />
 
@@ -91,49 +96,58 @@
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
             android:text="Sexo:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintEnd_toStartOf="@+id/radioButtonHombre"
             app:layout_constraintStart_toEndOf="@+id/imageView3"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonLastName" />
+            app:layout_constraintTop_toTopOf="@+id/radioButtonHombre" />
 
         <ImageView
             android:id="@+id/imageView3"
-            android:layout_width="46dp"
-            android:layout_height="58dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="16dp"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/textView2"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            app:layout_constraintTop_toTopOf="@+id/radioButtonHombre"
             app:srcCompat="@drawable/users_icon" />
 
         <TextView
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="28dp"
-            android:layout_marginTop="35dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="8dp"
             android:text="Fecha de Nacimiento"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintEnd_toStartOf="@+id/change_btn"
             app:layout_constraintStart_toEndOf="@+id/imageView4"
             app:layout_constraintTop_toBottomOf="@+id/radioButtonHombre" />
 
         <ImageView
             android:id="@+id/imageView4"
-            android:layout_width="46dp"
-            android:layout_height="53dp"
-            android:layout_marginStart="27dp"
-            android:layout_marginTop="24dp"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="40dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView3"
+            app:layout_constraintTop_toBottomOf="@+id/radioButtonHombre"
             app:srcCompat="@drawable/calendar_icon" />
 
         <Button
             android:id="@+id/change_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="24dp"
             android:text="Cambiar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.545"
             app:layout_constraintStart_toEndOf="@+id/textView3"
             app:layout_constraintTop_toBottomOf="@+id/radioButtonMujer" />
 
@@ -141,19 +155,19 @@
             android:id="@+id/dateTv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="48dp"
             android:text=""
             android:textSize="30sp"
-            app:layout_constraintStart_toEndOf="@+id/imageView4"
-            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+            tools:layout_editor_absoluteX="381dp"
+            tools:layout_editor_absoluteY="24dp" />
 
         <ImageView
             android:id="@+id/imageView5"
-            android:layout_width="58dp"
-            android:layout_height="54dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="43dp"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="28dp"
+            app:layout_constraintEnd_toStartOf="@+id/spinner"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView4"
             app:srcCompat="@drawable/hat_icon" />
@@ -163,16 +177,16 @@
             android:layout_width="198dp"
             android:layout_height="45dp"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="52dp"
+            android:layout_marginTop="56dp"
             app:layout_constraintStart_toEndOf="@+id/imageView5"
-            app:layout_constraintTop_toBottomOf="@+id/dateTv" />
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
         <Button
             android:id="@+id/btnSiguiente"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:layout_marginEnd="15dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="14dp"
             android:text="Siguiente"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/spinner" />

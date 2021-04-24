@@ -89,13 +89,13 @@ class PersonalDataActivity : AppCompatActivity() {
                     txtApellido.setError("Campo Apellido es obligatorio")
                 }
                 if(TextUtils.isEmpty(txtFechaNacimiento.text.toString())){
-                    txtFechaNacimiento.setError("Campo Fecha nacimiento obligatorio")
+                    mPickTimeBtn.setError("Campo Fecha nacimiento obligatorio")
                 }else{
-                    txtFechaNacimiento.setError(null)
+                    mPickTimeBtn.setError(null)
                 }
 
             } else {
-                txtFechaNacimiento.setError(null)
+                mPickTimeBtn.setError(null)
                 Log.i("1","Información personal:")
                 Log.i("2",txtNombre.text.toString()+" "+ txtApellido.text.toString())
                 if(radioButtonHombre.isChecked){
