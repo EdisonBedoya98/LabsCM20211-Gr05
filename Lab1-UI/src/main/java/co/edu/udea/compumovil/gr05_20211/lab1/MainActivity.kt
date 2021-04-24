@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val actionBar = supportActionBar
-        actionBar!!.title = "Pagina Principal"
+        actionBar!!.title = getString(R.string.mainTittle)
 
 /**feature/Duby
         val personalDataBtn: Button = findViewById(R.id.btnInicio)

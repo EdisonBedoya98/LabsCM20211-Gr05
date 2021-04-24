@@ -14,11 +14,13 @@
     <string name="emptyField" tools:ignore="MissingTranslation">Ingrese los datos por favor</string>
 
 
-    <string name="buttonPersonalData" tools:ignore="MissingTranslation">Información Personal</string>
+
+    <string name="mainTittle" tools:ignore="MissingTranslation">Página Principal</string>
+    <string name="PersonalData" tools:ignore="MissingTranslation">Información Personal</string>
     <string name="names" tools:ignore="MissingTranslation">Nombres</string>
     <string name="name" tools:ignore="MissingTranslation">Nombre</string>
     <string name="lastName" tools:ignore="MissingTranslation">Apellidos</string>
-    <string name="gender" tools:ignore="MissingTranslation">Género</string>
+    <string name="gender" tools:ignore="MissingTranslation">Sexo</string>
     <string name="man" tools:ignore="MissingTranslation">Hombre</string>
     <string name="woman" tools:ignore="MissingTranslation">Mujer</string>
     <string name="dateBirth" tools:ignore="MissingTranslation">Fecha de Nacimiento</string>
@@ -27,6 +29,10 @@
     <string name="highSchool" tools:ignore="MissingTranslation">Secundaria</string>
     <string name="university" tools:ignore="MissingTranslation">Universitario</string>
     <string name="other" tools:ignore="MissingTranslation">Otro</string>
+
+
+    <string name="allRight" tools:ignore="MissingTranslation">Todo correctoo</string>
+
 
     <string name="title_activity_data">DataActivity</string>
     <!-- Strings used for fragments for navigation -->

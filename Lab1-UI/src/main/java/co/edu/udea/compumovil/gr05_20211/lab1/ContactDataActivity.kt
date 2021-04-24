@@ -3,10 +3,8 @@ package co.edu.udea.compumovil.gr05_20211.lab1
 import android.content.Intent
 import android.os.Bundle
 import android.text.TextUtils
-import android.widget.ArrayAdapter
-import android.widget.AutoCompleteTextView
-import android.widget.Button
-import android.widget.EditText
+import android.util.Log
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_contact_data.*
 import java.util.regex.Matcher
@@ -61,8 +59,17 @@ class ContactDataActivity : AppCompatActivity() {
         personalDataBtn.setOnClickListener {
             val aux = contactDataActivity()
             if (aux){
-                val intent = Intent(this, DataActivity::class.java)
-                startActivity(intent)
+                Log.i("Información de Contacto","   ")
+                Log.i("Teléfono",txtTelefono?.text.toString())
+                Log.i("Dirección",txtDireccion?.text.toString())
+                Log.i("Email",txtCorreo?.text.toString())
+                Log.i("País",acPais?.text.toString())
+                Log.i("Ciudad",acCiudad?.text.toString())
+
+
+                Toast.makeText(this, getString(R.string.allRight), Toast.LENGTH_SHORT).show()
+                /*val intent = Intent(this, DataActivity::class.java)
+                startActivity(intent)*/
             }
         }
     }
@@ -81,7 +88,7 @@ class ContactDataActivity : AppCompatActivity() {
     )
 
     private val cities = arrayOf(
-        "Medellin", "Bogota", "Cali", "Barranquilla"
+        "Bello","Medellin", "Bogota", "Cali", "Barranquilla"
     )
     
     private fun isEmailValid(email: String?): Boolean {

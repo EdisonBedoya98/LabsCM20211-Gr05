@@ -31,7 +31,7 @@ class PersonalDataActivity : AppCompatActivity() {
         setContentView(R.layout.activity_personal_data)
 
         val actionBar = supportActionBar
-        actionBar!!.title = "Información Personal"
+        actionBar!!.title = getString(R.string.PersonalData)
 
         actionBar.setDisplayHomeAsUpEnabled(true)
 
@@ -107,14 +107,14 @@ class PersonalDataActivity : AppCompatActivity() {
                 }
                 Log.i("5","Nació el "+day+"/"+month+"/"+year)
                 Log.i("6",option.selectedItem.toString())
-                Toast.makeText(this, "Todo correctoo", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, getString(R.string.allRight), Toast.LENGTH_SHORT).show()
                 val intent = Intent(this, ContactDataActivity::class.java)
                 startActivity(intent)
             }
         }
         option = findViewById(R.id.spinner) as Spinner
 
-        val options = arrayOf("","Primaria", "Secundaria", "Universitaria", "Otro")
+        val options = arrayOf("",getString(R.string.primary), getString(R.string.highSchool), getString(R.string.university), getString(R.string.other))
 
         option.adapter = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, options)
 
